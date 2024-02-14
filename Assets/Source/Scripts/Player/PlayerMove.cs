@@ -7,6 +7,7 @@ public class PlayerMove : MonoBehaviour
 
     [SerializeField] private Rigidbody _rigidBody;
     [SerializeField] private Transform _root;
+    [SerializeField] private HeadBobEffect _headBobEffect;
     [Space]
     [SerializeField] private float _speed;
     [SerializeField] private float _sprintSpeed;
@@ -26,7 +27,7 @@ public class PlayerMove : MonoBehaviour
     }
 
     private void Update()
-    {
+    {       
         _horizontal = Input.GetAxis(HorizontalAxis);
         _vertical = Input.GetAxis(VerticalAxis);
         PlayerJump();
@@ -39,7 +40,15 @@ public class PlayerMove : MonoBehaviour
 
     private void PlayerMoving()
     {
+        if (_horizontal == 0f && _vertical == 0f)
+        {
+            _headBobEffect.SetDefaultPosition();
+            return;
+        }
+
         var moveDirection = _root.TransformDirection(new Vector3(_horizontal, 0, _vertical));
+
+        _headBobEffect.SetNextPosition();
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
