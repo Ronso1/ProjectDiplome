@@ -46,9 +46,12 @@ public class PlayerMove : MonoBehaviour
             return;
         }
 
-        var moveDirection = _root.TransformDirection(new Vector3(_horizontal, 0, _vertical));
+        if (_isGrounded)
+        {
+            _headBobEffect.SetNextPosition();
+        }
 
-        _headBobEffect.SetNextPosition();
+        var moveDirection = _root.TransformDirection(new Vector3(_horizontal, 0f, _vertical));
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
