@@ -46,9 +46,12 @@ public class PlayerMove : MonoBehaviour
             return;
         }
 
-        var moveDirection = _root.TransformDirection(new Vector3(_horizontal, 0, _vertical));
+        if (_isGrounded)
+        {
+            _headBobEffect.SetNextPosition();
+        }
 
-        _headBobEffect.SetNextPosition();
+        var moveDirection = _root.TransformDirection(new Vector3(_horizontal, 0f, _vertical));
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -62,18 +65,14 @@ public class PlayerMove : MonoBehaviour
         _rigidBody.MovePosition(_rigidBody.transform.position + moveDirection * _speed * Time.fixedDeltaTime);
     }
 
-    //TODO: изменить проверку прыжка, например сделать через тег
     private void PlayerJump()
     {
+        _isGrounded = Physics.Raycast(transform.position, Vector3.down, 1.3f);
+
         if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
         {
             _isGrounded = false;
             _rigidBody.velocity = new Vector3(0f, _jumpHeight, 0f);
         }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        _isGrounded = true;
-    }
+    }  
 }
