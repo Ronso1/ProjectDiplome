@@ -340,14 +340,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8916717042037850433, guid: 21dc441dfadeeff4daa1453c2e4c9028, type: 3}
-      propertyPath: _bobbingAmount
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 8916717042037850433, guid: 21dc441dfadeeff4daa1453c2e4c9028, type: 3}
-      propertyPath: _walkingBobbingSpeed
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
