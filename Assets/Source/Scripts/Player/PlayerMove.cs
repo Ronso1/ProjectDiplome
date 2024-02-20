@@ -8,6 +8,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private Rigidbody _rigidBody;
     [SerializeField] private Transform _root;
     [SerializeField] private HeadBobEffect _headBobEffect;
+    [SerializeField] private PickupGun _pickupGun;
     [Space]
     [SerializeField] private float _speed;
     [SerializeField] private float _sprintSpeed;
@@ -32,6 +33,7 @@ public class PlayerMove : MonoBehaviour
         _horizontal = Input.GetAxis(HorizontalAxis);
         _vertical = Input.GetAxis(VerticalAxis);
         PlayerJump();
+        PlayerTakeGun();
     }
 
     private void FixedUpdate()
@@ -75,5 +77,13 @@ public class PlayerMove : MonoBehaviour
             _isGrounded = false;
             _rigidBody.velocity = new Vector3(0f, _jumpHeight, 0f);
         }
-    }  
+    }
+    
+    private void PlayerTakeGun()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            _pickupGun.TakeGun();
+        }
+    }
 }
