@@ -13,6 +13,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float _sprintSpeed;
     [Space]
     [SerializeField] private float _jumpHeight;
+    [SerializeField] private float _playerHeight = 2.3f;
 
     private float _horizontal;
     private float _vertical;
@@ -67,7 +68,7 @@ public class PlayerMove : MonoBehaviour
 
     private void PlayerJump()
     {
-        _isGrounded = Physics.Raycast(transform.position, Vector3.down, 1.3f);
+        _isGrounded = Physics.Raycast(transform.position, Vector3.down, _playerHeight);
 
         if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
         {
