@@ -6,6 +6,7 @@ public class GunShoot : MonoBehaviour
     [SerializeField] private Camera _playerCamera;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _clipShoot;
+    [SerializeField] private TrainObstacle _obstacleHandler;
     [Space]
     [SerializeField] private float _shootDistance;
     [SerializeField] private float _shootDelay;
@@ -28,7 +29,12 @@ public class GunShoot : MonoBehaviour
         {
             _audioSource.Play();
             StartCoroutine(ShootDelay());
-            Debug.Log(hitInfo.transform.name);
+
+            if (hitInfo.transform.tag == "Obstacle")
+            {
+                hitInfo.transform.gameObject.SetActive(false);
+                _obstacleHandler.RespawnObstacle();
+            }
         }
     }
 
