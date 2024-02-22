@@ -6,6 +6,9 @@ public class GunShoot : MonoBehaviour
     [SerializeField] private Camera _playerCamera;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _clipShoot;
+    [SerializeField] private GameObject _gunMuzzle;
+    [SerializeField] private GameObject _bullet;
+    [Space]
     [SerializeField] private TrainObstacle _obstacleHandler;
     [SerializeField] private GunAnimations _gunAnimations;
     [Space]
@@ -31,6 +34,8 @@ public class GunShoot : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hitInfo, _shootDistance) && _shootEnabled)
         {
             _audioSource.Play();
+            Instantiate(_bullet, _gunMuzzle.transform.position, _gunMuzzle.transform.rotation);
+           
             StartCoroutine(ShootDelay());
 
             if (hitInfo.transform.tag == "Obstacle")
