@@ -9,6 +9,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private Transform _root;
     [SerializeField] private HeadBobEffect _headBobEffect;
     [SerializeField] private PickupGun _pickupGun;
+    [SerializeField] private GunAnimations _gunAnimations;
     [Space]
     [SerializeField] private float _speed;
     [SerializeField] private float _sprintSpeed;
@@ -21,6 +22,10 @@ public class PlayerMove : MonoBehaviour
     private float _moveSpeed;
 
     private bool _isGrounded;
+    private bool _isWalking;
+
+    public bool IsWalking() => _isWalking;
+    public bool IsGrounded() => _isGrounded;
 
     private void Start()
     {
@@ -46,12 +51,14 @@ public class PlayerMove : MonoBehaviour
         if (_horizontal == 0f && _vertical == 0f)
         {
             _headBobEffect.SetDefaultPosition();
+            _gunAnimations.StopWalkingAnimation();
             return;
         }
 
         if (_isGrounded)
         {
             _headBobEffect.SetNextPosition();
+            _gunAnimations.PlayWalkingAnimation();
         }
 
         var moveDirection = _root.TransformDirection(new Vector3(_horizontal, 0f, _vertical));

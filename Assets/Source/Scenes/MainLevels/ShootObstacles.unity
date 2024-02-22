@@ -10018,6 +10018,29 @@ Transform:
   - {fileID: 538493530}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1207217440 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2201551487729596335, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
+  m_PrefabInstance: {fileID: 854657181394666576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1207217444 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1220416509546917511, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
+  m_PrefabInstance: {fileID: 854657181394666576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1207217445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207217440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de95efc558de74d4da9b19e579e28307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gunAnimator: {fileID: 1207217444}
 --- !u!1 &1315864893
 GameObject:
   m_ObjectHideFlags: 0
@@ -12926,13 +12949,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 624161516328922975, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
-      propertyPath: _obstacle
-      value: 
-      objectReference: {fileID: 2025560364}
-    - target: {fileID: 624161516328922975, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
       propertyPath: _obstacleHandler
       value: 
       objectReference: {fileID: 2025560364}
+    - target: {fileID: 1476152442186685961, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2999992
+      objectReference: {fileID: 0}
     - target: {fileID: 1842494370074503992, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.985
@@ -12973,6 +12996,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3772757587683591667, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
+      propertyPath: _gunAnimations
+      value: 
+      objectReference: {fileID: 1207217445}
     - target: {fileID: 5628831129675365343, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
       propertyPath: m_Name
       value: Player with gun
@@ -12980,7 +13007,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2201551487729596335, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1207217445}
   m_SourcePrefab: {fileID: 100100000, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
 --- !u!23 &1517774458561998867
 MeshRenderer:
