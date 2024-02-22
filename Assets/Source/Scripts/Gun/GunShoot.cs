@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using UnityEngine;
 
@@ -34,9 +35,12 @@ public class GunShoot : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hitInfo, _shootDistance) && _shootEnabled)
         {
             _audioSource.Play();
-            Instantiate(_bullet, _gunMuzzle.transform.position, _gunMuzzle.transform.rotation);
-           
+            var bullet = Instantiate(_bullet, _gunMuzzle.transform.position, _gunMuzzle.transform.rotation);
+
             StartCoroutine(ShootDelay());
+
+            bullet.transform.DOLocalMove(hitInfo.point, 0.1f)
+                 .SetEase(Ease.InOutSine);
 
             if (hitInfo.transform.tag == "Obstacle")
             {
