@@ -7,6 +7,7 @@ public class GunShoot : MonoBehaviour
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _clipShoot;
     [SerializeField] private TrainObstacle _obstacleHandler;
+    [SerializeField] private GunAnimations _gunAnimations;
     [Space]
     [SerializeField] private float _shootDistance;
     [SerializeField] private float _shootDelay;
@@ -24,6 +25,8 @@ public class GunShoot : MonoBehaviour
     private void PlayerShoot()
     {
         Ray ray = _playerCamera.ScreenPointToRay(Input.mousePosition);
+
+        _gunAnimations.StopWalkingAnimation();
 
         if (Physics.Raycast(ray, out RaycastHit hitInfo, _shootDistance) && _shootEnabled)
         {

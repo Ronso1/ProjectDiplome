@@ -12949,6 +12949,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 624161516328922975, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
+      propertyPath: _gunAnimations
+      value: 
+      objectReference: {fileID: 1207217445}
+    - target: {fileID: 624161516328922975, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
       propertyPath: _obstacleHandler
       value: 
       objectReference: {fileID: 2025560364}
