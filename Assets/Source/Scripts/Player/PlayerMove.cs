@@ -72,7 +72,11 @@ public class PlayerMove : MonoBehaviour
         else if (_isGrounded is false)
         {
             _headBobEffect.SetDefaultPosition();
-            _gunAnimations.StopWalkingAnimation();
+
+            if (_gunAnimations.CheckGameObjectActive(_gunAnimations.gameObject.activeSelf))
+            {
+                _gunAnimations.StopWalkingAnimation();
+            }
         }
 
         var moveDirection = _root.TransformDirection(new Vector3(_horizontal, 0f, _vertical));
