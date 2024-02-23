@@ -34,7 +34,7 @@ public class PlayerMove : MonoBehaviour
     }
 
     private void Update()
-    {       
+    {
         _horizontal = Input.GetAxis(HorizontalAxis);
         _vertical = Input.GetAxis(VerticalAxis);
         PlayerJump();
@@ -51,14 +51,28 @@ public class PlayerMove : MonoBehaviour
         if (_horizontal == 0f && _vertical == 0f)
         {
             _headBobEffect.SetDefaultPosition();
-            _gunAnimations.StopWalkingAnimation();
+
+            if (_gunAnimations.CheckGameObjectActive(_gunAnimations.gameObject.activeSelf))
+            {
+                _gunAnimations.StopWalkingAnimation();
+            }
+
             return;
         }
 
         if (_isGrounded)
         {
             _headBobEffect.SetNextPosition();
-            _gunAnimations.PlayWalkingAnimation();
+
+            if (_gunAnimations.CheckGameObjectActive(_gunAnimations.gameObject.activeSelf))
+            {
+                _gunAnimations.PlayWalkingAnimation();
+            }
+        }
+        else if (_isGrounded is false)
+        {
+            _headBobEffect.SetDefaultPosition();
+            _gunAnimations.StopWalkingAnimation();
         }
 
         var moveDirection = _root.TransformDirection(new Vector3(_horizontal, 0f, _vertical));
@@ -85,7 +99,7 @@ public class PlayerMove : MonoBehaviour
             _rigidBody.velocity = new Vector3(0f, _jumpHeight, 0f);
         }
     }
-    
+
     private void PlayerTakeGun()
     {
         if (Input.GetKeyDown(KeyCode.E))

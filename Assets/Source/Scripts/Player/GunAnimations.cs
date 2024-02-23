@@ -13,4 +13,16 @@ public class GunAnimations : MonoBehaviour
     {
         _gunAnimator.SetBool("isWalking", false);
     }
+
+    public bool CheckGameObjectActive(bool gameObject)
+    {
+        if (gameObject)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }

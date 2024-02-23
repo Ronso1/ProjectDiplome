@@ -28,16 +28,20 @@ public class GunShoot : MonoBehaviour
 
     private void PlayerShoot()
     {
+        if (_shootEnabled is false)
+        {
+            _gunAnimations.StopWalkingAnimation();
+            return;
+        }
+
         Ray ray = _playerCamera.ScreenPointToRay(Input.mousePosition);
 
         _gunAnimations.StopWalkingAnimation();
-
+        _audioSource.Play();
+        
         if (Physics.Raycast(ray, out RaycastHit hitInfo, _shootDistance) && _shootEnabled)
-        {
-            _audioSource.Play();
+        {      
             var bullet = Instantiate(_bullet, _gunMuzzle.transform.position, _gunMuzzle.transform.rotation);
-
-            StartCoroutine(ShootDelay());
 
             bullet.transform.DOLocalMove(hitInfo.point, 0.1f)
                  .SetEase(Ease.InOutSine);
@@ -48,6 +52,8 @@ public class GunShoot : MonoBehaviour
                 _obstacleHandler.RespawnObstacle();
             }
         }
+
+        StartCoroutine(ShootDelay());
     }
 
     private IEnumerator ShootDelay()
