@@ -156,7 +156,7 @@ MonoBehaviour:
   _pickupGun: {fileID: 5264371450234438552}
   _gunAnimations: {fileID: 71302136280389570}
   _speed: 5
-  _sprintSpeed: 10
+  _sprintSpeed: 8
   _jumpHeight: 5
   _playerHeight: 2.3
 --- !u!1 &1071571692514816902
@@ -602,7 +602,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2705347461830001857, guid: c12a6f26d20232047805688b7c0d6a72, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.29999867
+      value: 0.2999987
       objectReference: {fileID: 0}
     - target: {fileID: 2705347461830001857, guid: c12a6f26d20232047805688b7c0d6a72, type: 3}
       propertyPath: m_LocalPosition.y
@@ -646,12 +646,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3421170648073366887, guid: c12a6f26d20232047805688b7c0d6a72, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9173771960940374855, guid: c12a6f26d20232047805688b7c0d6a72, type: 3}
       propertyPath: _bullet
       value: 
       objectReference: {fileID: 330960353776672567, guid: 00074dd5933f624498e9a8cc4ef71ad9, type: 3}
+    - target: {fileID: 9173771960940374855, guid: c12a6f26d20232047805688b7c0d6a72, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1031064708549507420}
     - target: {fileID: 9173771960940374855, guid: c12a6f26d20232047805688b7c0d6a72, type: 3}
       propertyPath: _gunMuzzle
       value: 

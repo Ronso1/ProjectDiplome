@@ -10,10 +10,10 @@ public class GunShoot : MonoBehaviour
     [SerializeField] private GameObject _gunMuzzle;
     [SerializeField] private GameObject _bullet;
     [Space]
+    [SerializeField] private PlayerMove _player;
     [SerializeField] private TrainObstacle _obstacleHandler;
     [SerializeField] private GunAnimations _gunAnimations;
     [Space]
-    [SerializeField] private float _shootDistance;
     [SerializeField] private float _shootDelay;
 
     private bool _shootEnabled = true;
@@ -30,17 +30,20 @@ public class GunShoot : MonoBehaviour
     {
         if (_shootEnabled is false)
         {
-            _gunAnimations.StopWalkingAnimation();
             return;
+        }
+
+        if (_player.IsGrounded() == false)
+        {
+            _gunAnimations.StopWalkingAnimation();
         }
 
         Ray ray = _playerCamera.ScreenPointToRay(Input.mousePosition);
 
-        _gunAnimations.StopWalkingAnimation();
         _audioSource.Play();
-        
-        if (Physics.Raycast(ray, out RaycastHit hitInfo, _shootDistance) && _shootEnabled)
-        {      
+
+        if (Physics.Raycast(ray, out RaycastHit hitInfo, Mathf.Infinity) && _shootEnabled)
+        {
             var bullet = Instantiate(_bullet, _gunMuzzle.transform.position, _gunMuzzle.transform.rotation);
 
             bullet.transform.DOLocalMove(hitInfo.point, 0.1f)
