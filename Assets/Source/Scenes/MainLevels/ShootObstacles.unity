@@ -57845,14 +57845,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player with gun
       objectReference: {fileID: 0}
-    - target: {fileID: 1031064708549507420, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
-      propertyPath: _playerHeight
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2239893469420484121, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2931075940498697205, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.985
@@ -57892,10 +57884,6 @@ PrefabInstance:
     - target: {fileID: 2931075940498697205, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5264371450234438552, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
-      propertyPath: _distanceToInteract
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5701569585261293625, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
       propertyPath: _obstacleHandler
