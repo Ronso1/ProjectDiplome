@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class SpawnHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private List<Transform> _obstaclesSpawnPoints;
+    [SerializeField] private GameObject _barrel;
+    [Space]
+    [SerializeField] private float _spawnInterval;
+
+    private bool _isSpawned = false;
+
+    private void Update()
     {
-        
+        SpawnObstacle();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SpawnObstacle()
     {
-        
+        if (_isSpawned)
+        {
+            return;
+        }
+
+        Instantiate(_barrel, _obstaclesSpawnPoints[Random.Range(0, _obstaclesSpawnPoints.Count - 1)]);
+        StartCoroutine(DelaySpawnObstacle());
+    }
+
+    private IEnumerator DelaySpawnObstacle()
+    {
+        _isSpawned = true;
+        yield return new WaitForSeconds(_spawnInterval);
+        _isSpawned = false;
     }
 }

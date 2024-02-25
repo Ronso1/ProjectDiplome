@@ -11705,6 +11705,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d15727c6eb4644e42a200bb1832d26d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _obstaclesSpawnPoints:
+  - {fileID: 1557402575}
+  - {fileID: 71631706}
+  - {fileID: 1267599654}
+  - {fileID: 903596493}
+  - {fileID: 1498702622}
+  - {fileID: 1084634397}
+  - {fileID: 1660148342}
+  - {fileID: 773738109}
+  - {fileID: 258834423}
+  _barrel: {fileID: 5893397614181109558, guid: 0669f0bcc182cb7448dcbfde0eab3900, type: 3}
+  _spawnInterval: 0.25
 --- !u!1 &420508623
 GameObject:
   m_ObjectHideFlags: 0
