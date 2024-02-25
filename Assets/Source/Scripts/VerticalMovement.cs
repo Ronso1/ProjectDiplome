@@ -9,8 +9,9 @@ public class VerticalMovement : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, direction, speed), transform.position.z);
+        transform.Translate(Vector3.up * speed * direction * Time.deltaTime);
         Debug.Log(Vector3.up * speed * direction * Time.deltaTime);
+
         if (transform.position.y >= topBound - 1f)
         {
             direction = bottomBound;
