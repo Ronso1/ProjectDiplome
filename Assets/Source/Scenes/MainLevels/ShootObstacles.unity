@@ -63758,7 +63758,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2099362946}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d77d343d3ff9eaa4185ac8e0c95e6bd3, type: 3}
+  m_Script: {fileID: 11500000, guid: 546d7f61c73b2634d8bbcdc47741ebd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _respawnPoint: {fileID: 1820995534}
@@ -67277,6 +67277,10 @@ PrefabInstance:
     - target: {fileID: 940551328778933574, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
       propertyPath: m_Name
       value: Player with gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 984848303390296729, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2239893469420484121, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
       propertyPath: m_IsActive

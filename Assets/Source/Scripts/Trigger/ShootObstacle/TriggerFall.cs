@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TriggerFirstFall : MonoBehaviour
+public class TriggerFall : MonoBehaviour
 {
     [SerializeField] private Transform _respawnPoint;
 
