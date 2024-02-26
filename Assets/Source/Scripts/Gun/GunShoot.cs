@@ -61,6 +61,7 @@ public class GunShoot : MonoBehaviour
                 var obstacle = hitInfo.transform.GetComponent<ObstacleLogic>();
 
                 obstacle.health -= _damage;
+                print(obstacle.health);
             }
         }
 

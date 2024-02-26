@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ObstacleLogic : MonoBehaviour
 {
-    public float health = 100f;
+     public float health = 100f;
     [SerializeField] private float _lifeTime = 5f;
     [SerializeField] private float _minSpeedRange;
     [SerializeField] private float _maxSpeedRange;
