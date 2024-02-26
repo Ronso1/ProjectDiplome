@@ -722,7 +722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3421170648073366887, guid: c12a6f26d20232047805688b7c0d6a72, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9173771960940374855, guid: c12a6f26d20232047805688b7c0d6a72, type: 3}
       propertyPath: _bullet
@@ -730,7 +730,7 @@ PrefabInstance:
       objectReference: {fileID: 330960353776672567, guid: 00074dd5933f624498e9a8cc4ef71ad9, type: 3}
     - target: {fileID: 9173771960940374855, guid: c12a6f26d20232047805688b7c0d6a72, type: 3}
       propertyPath: _damage
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 9173771960940374855, guid: c12a6f26d20232047805688b7c0d6a72, type: 3}
       propertyPath: _player
