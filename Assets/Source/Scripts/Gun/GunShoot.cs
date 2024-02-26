@@ -15,6 +15,7 @@ public class GunShoot : MonoBehaviour
     [SerializeField] private GunAnimations _gunAnimations;
     [Space]
     [SerializeField] private float _shootDelay;
+    [SerializeField] private float _damage;
 
     private bool _shootEnabled = true;
 
@@ -53,6 +54,13 @@ public class GunShoot : MonoBehaviour
             {
                 hitInfo.transform.gameObject.SetActive(false);
                 _obstacleHandler.RespawnObstacle();
+            }
+
+            if (hitInfo.transform.GetComponent<ObstacleLogic>())
+            {
+                var obstacle = hitInfo.transform.GetComponent<ObstacleLogic>();
+
+                obstacle.health -= _damage;
             }
         }
 

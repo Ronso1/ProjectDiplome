@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class ObstacleLogic : MonoBehaviour
 {
+    public float health = 100f;
     [SerializeField] private float _lifeTime = 5f;
     [SerializeField] private float _minSpeedRange;
     [SerializeField] private float _maxSpeedRange;
@@ -17,6 +18,12 @@ public class ObstacleLogic : MonoBehaviour
 
     private void Update()
     {
+        if (health <= 0f)
+        {
+            StopCoroutine(StartDisableObstacle());
+            Destroy(gameObject);
+        }
+
         transform.Translate(
             new Vector3(0f, _speed * Time.deltaTime, 0f));
     }

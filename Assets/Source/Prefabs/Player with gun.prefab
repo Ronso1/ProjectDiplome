@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1031064708549507420}
   m_Layer: 0
   m_Name: Player with gun
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -728,6 +728,10 @@ PrefabInstance:
       propertyPath: _bullet
       value: 
       objectReference: {fileID: 330960353776672567, guid: 00074dd5933f624498e9a8cc4ef71ad9, type: 3}
+    - target: {fileID: 9173771960940374855, guid: c12a6f26d20232047805688b7c0d6a72, type: 3}
+      propertyPath: _damage
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 9173771960940374855, guid: c12a6f26d20232047805688b7c0d6a72, type: 3}
       propertyPath: _player
       value: 
