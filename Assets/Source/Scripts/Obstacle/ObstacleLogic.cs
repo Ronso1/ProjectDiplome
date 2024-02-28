@@ -3,12 +3,14 @@ using UnityEngine;
 
 public class ObstacleLogic : MonoBehaviour
 {
-     public float health = 100f;
+    [SerializeField] private float _health = 100f;
     [SerializeField] private float _lifeTime = 5f;
     [SerializeField] private float _minSpeedRange;
     [SerializeField] private float _maxSpeedRange;
 
     private float _speed;
+
+    public float Health => _health;
 
     private void Start()
     {
@@ -18,7 +20,7 @@ public class ObstacleLogic : MonoBehaviour
 
     private void Update()
     {
-        if (health <= 0f)
+        if (_health <= 0f)
         {
             StopCoroutine(StartDisableObstacle());
             Destroy(gameObject);
@@ -42,4 +44,8 @@ public class ObstacleLogic : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void TakeDamage(float damage)
+    {
+        _health -= damage;
+    }
 }
