@@ -7,6 +7,8 @@ public class ObstacleLogic : MonoBehaviour
     [SerializeField] private float _lifeTime = 5f;
     [SerializeField] private float _minSpeedRange;
     [SerializeField] private float _maxSpeedRange;
+    [Space]
+    [SerializeField] private Vector3 _direction;
 
     private float _speed;
 
@@ -27,7 +29,9 @@ public class ObstacleLogic : MonoBehaviour
         }
 
         transform.Translate(
-            new Vector3(0f, _speed * Time.deltaTime, 0f));
+            new Vector3(_direction.x * _speed * Time.deltaTime,
+            _direction.y * _speed * Time.deltaTime,
+            _direction.z * _speed * Time.deltaTime));
     }
 
     private void OnCollisionEnter(Collision collision)
