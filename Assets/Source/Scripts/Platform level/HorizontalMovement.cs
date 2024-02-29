@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class HorizontalMovement : MonoBehaviour
 {
-    public float speed = 2.0f;
-    public float distance = 10f;
+    [SerializeField] private float _speed = 2.0f;
+    [SerializeField] private float _distance = 10f;
     private float initialPosition;
     private bool movingRight = true;
 
@@ -16,14 +16,14 @@ public class HorizontalMovement : MonoBehaviour
     {
         if (movingRight)
         {
-            transform.Translate(Vector3.right * speed * Time.deltaTime);
+            transform.Translate(Vector3.right * _speed * Time.deltaTime);
         }
         else
         {
-            transform.Translate(Vector3.left * speed * Time.deltaTime);
+            transform.Translate(Vector3.left * _speed * Time.deltaTime);
         }
 
-        if (Mathf.Abs(transform.position.x - initialPosition) >= distance)
+        if (Mathf.Abs(transform.position.x - initialPosition) >= _distance)
         {
             movingRight = !movingRight;
         }
