@@ -38,7 +38,9 @@ public class ObstacleLogic : MonoBehaviour
     {
         if (collision.transform.tag == "Player")
         {
-            print("Hit player!");
+            var playerRespawn = collision.gameObject.GetComponent<PlayerCurrentRespawnPoint>();
+
+            playerRespawn.RespawnPlayer();
         }
     }
 

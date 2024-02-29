@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3727718601311897465}
   - component: {fileID: 984848303390296729}
   - component: {fileID: 1031064708549507420}
+  - component: {fileID: 1103509243953400891}
   m_Layer: 0
   m_Name: Player with gun
   m_TagString: Player
@@ -159,6 +160,18 @@ MonoBehaviour:
   _sprintSpeed: 8
   _jumpHeight: 5
   _playerHeight: 2
+--- !u!114 &1103509243953400891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940551328778933574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3879ca1496c997d4585d351c8c801c83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1071571692514816902
 GameObject:
   m_ObjectHideFlags: 0

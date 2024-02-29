@@ -23,7 +23,7 @@ public class SpawnHandler : MonoBehaviour
             return;
         }
 
-        Instantiate(_barrel, _obstaclesSpawnPoints[Random.Range(0, _obstaclesSpawnPoints.Count - 1)]);
+        Instantiate(_barrel, _obstaclesSpawnPoints[Random.Range(0, _obstaclesSpawnPoints.Count)]);
         StartCoroutine(DelaySpawnObstacle());
     }
 
