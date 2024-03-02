@@ -277,5 +277,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed73b5c3a765f36478039ace2db0e88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _walkingBobbingSpeed: 8
-  _bobbingAmount: 0.025
+  _walkingBobbingSpeed: 10
+  _bobbingAmount: 0.05
