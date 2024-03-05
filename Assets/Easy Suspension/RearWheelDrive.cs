@@ -5,8 +5,8 @@ public class RearWheelDrive : MonoBehaviour {
 	[SerializeField] private WheelCollider[] wheels;
 	[SerializeField] private Transform[] wheelsTransform;
 
-	public float maxAngle = 30;
-	public float maxTorque = 300;
+	public float maxAngle = 30f;
+	public float maxTorque = 300f;
 
 	public void Update()
 	{
@@ -15,6 +15,15 @@ public class RearWheelDrive : MonoBehaviour {
 
 		for (int i = 0; i < wheels.Length; i++)
 		{
+			if (Input.GetKey(KeyCode.Space))
+			{
+				wheels[i].brakeTorque = 3000f;	
+			}
+			else
+			{
+                wheels[i].brakeTorque = 0f;
+            }
+
             if (wheels[i].transform.localPosition.z > 0)
 				wheels[i].steerAngle = angle;
 
