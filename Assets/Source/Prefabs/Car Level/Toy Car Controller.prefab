@@ -1093,6 +1093,7 @@ MonoBehaviour:
   - {fileID: 7769410480732204160}
   - {fileID: 7882613385424345232}
   - {fileID: 2749215427132247314}
+  _brakePower: 8000
   maxAngle: 30
   maxTorque: 300
 --- !u!1 &6700472665592013663

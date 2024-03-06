@@ -5,8 +5,10 @@ public class RearWheelDrive : MonoBehaviour {
 	[SerializeField] private WheelCollider[] wheels;
 	[SerializeField] private Transform[] wheelsTransform;
 
+	[SerializeField] private float _brakePower = 3000f;
 	public float maxAngle = 30f;
 	public float maxTorque = 300f;
+
 
 	public void Update()
 	{
@@ -17,7 +19,7 @@ public class RearWheelDrive : MonoBehaviour {
 		{
 			if (Input.GetKey(KeyCode.Space))
 			{
-				wheels[i].brakeTorque = 3000f;	
+				wheels[i].brakeTorque = _brakePower;	
 			}
 			else
 			{
