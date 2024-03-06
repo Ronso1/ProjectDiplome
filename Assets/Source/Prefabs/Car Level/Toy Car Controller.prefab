@@ -292,11 +292,11 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.16
   m_SuspensionSpring:
-    spring: 41446.51
-    damper: 6631.4424
+    spring: 41446.53
+    damper: 6631.4453
     targetPosition: 0.5
-  m_SuspensionDistance: 0.19620004
-  m_ForceAppPointDistance: 0.3786836
+  m_SuspensionDistance: 0.1962
+  m_ForceAppPointDistance: 0.37868357
   m_Mass: 20
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
@@ -398,8 +398,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.16
   m_SuspensionSpring:
-    spring: 33285.98
-    damper: 5325.757
+    spring: 33285.97
+    damper: 5325.755
     targetPosition: 0.5
   m_SuspensionDistance: 0.19619998
   m_ForceAppPointDistance: 0.3876835
@@ -679,8 +679,8 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.16
   m_SuspensionSpring:
-    spring: 33530.33
-    damper: 5364.853
+    spring: 33530.316
+    damper: 5364.851
     targetPosition: 0.5
   m_SuspensionDistance: 0.19620003
   m_ForceAppPointDistance: 0.39168358
@@ -1062,7 +1062,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6253149119142111318}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5300f21908fdde843b37970f8cb9c75e, type: 3}
   m_Name: 
@@ -1078,7 +1078,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6253149119142111318}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54357fbc914962545a9b1451e34edcec, type: 3}
   m_Name: 
@@ -1231,7 +1231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3029622026258839980
 Transform:
   m_ObjectHideFlags: 0
@@ -1470,10 +1470,10 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.16
   m_SuspensionSpring:
-    spring: 41737.176
-    damper: 6677.9478
+    spring: 41737.188
+    damper: 6677.95
     targetPosition: 0.5
-  m_SuspensionDistance: 0.1962
+  m_SuspensionDistance: 0.19620001
   m_ForceAppPointDistance: 0.3816836
   m_Mass: 20
   m_WheelDampingRate: 0.25
@@ -1507,6 +1507,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6980835976635822918}
+  - component: {fileID: 6991870592013254188}
   m_Layer: 0
   m_Name: Toy Car Controller
   m_TagString: Untagged
@@ -1531,3 +1532,19 @@ Transform:
   - {fileID: 3029622026258839980}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6991870592013254188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8435718695167019811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad0eea35ee883d543912e9aebaff7825, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _easySuspension: {fileID: 5021023130740990759}
+  _rearWheelDrive: {fileID: 3715481396331049599}
+  _carCamera: {fileID: 7139703553679927328}
+  _player: {fileID: 0}

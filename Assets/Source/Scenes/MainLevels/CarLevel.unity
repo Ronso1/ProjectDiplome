@@ -3715,6 +3715,28 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1254215089 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3715481396331049599, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
+  m_PrefabInstance: {fileID: 1578892119}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54357fbc914962545a9b1451e34edcec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1254215090 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5021023130740990759, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
+  m_PrefabInstance: {fileID: 1578892119}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5300f21908fdde843b37970f8cb9c75e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1463911538
 GameObject:
   m_ObjectHideFlags: 0
@@ -4082,11 +4104,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6980835976635822918, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.5
+      value: -0.17
       objectReference: {fileID: 0}
     - target: {fileID: 6980835976635822918, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28
+      value: 24.77
       objectReference: {fileID: 0}
     - target: {fileID: 6980835976635822918, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4116,77 +4138,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8374043883824868380, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
-      propertyPath: m_SuspensionDistance
-      value: 0.19620001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8374043883824868380, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
-      propertyPath: m_ForceAppPointDistance
-      value: 0.38168383
-      objectReference: {fileID: 0}
-    - target: {fileID: 8374043883824868380, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
-      propertyPath: m_SuspensionSpring.damper
-      value: 6677.95
-      objectReference: {fileID: 0}
-    - target: {fileID: 8374043883824868380, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
-      propertyPath: m_SuspensionSpring.spring
-      value: 41737.188
-      objectReference: {fileID: 0}
+    - target: {fileID: 6991870592013254188, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1975179179}
     - target: {fileID: 8435718695167019811, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
       propertyPath: m_Name
       value: Toy Car Controller
-      objectReference: {fileID: 0}
-    - target: {fileID: 8435718695167019811, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8568748476155554739, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
-      propertyPath: m_SuspensionDistance
-      value: 0.19620003
-      objectReference: {fileID: 0}
-    - target: {fileID: 8568748476155554739, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
-      propertyPath: m_ForceAppPointDistance
-      value: 0.39168406
-      objectReference: {fileID: 0}
-    - target: {fileID: 8568748476155554739, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
-      propertyPath: m_SuspensionSpring.damper
-      value: 5364.851
-      objectReference: {fileID: 0}
-    - target: {fileID: 8568748476155554739, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
-      propertyPath: m_SuspensionSpring.spring
-      value: 33530.316
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643388176834058872, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
-      propertyPath: m_SuspensionDistance
-      value: 0.19619998
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643388176834058872, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
-      propertyPath: m_ForceAppPointDistance
-      value: 0.38768387
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643388176834058872, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
-      propertyPath: m_SuspensionSpring.damper
-      value: 5325.755
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643388176834058872, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
-      propertyPath: m_SuspensionSpring.spring
-      value: 33285.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809556487767258932, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
-      propertyPath: m_SuspensionDistance
-      value: 0.1962
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809556487767258932, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
-      propertyPath: m_ForceAppPointDistance
-      value: 0.37868404
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809556487767258932, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
-      propertyPath: m_SuspensionSpring.damper
-      value: 6631.4453
-      objectReference: {fileID: 0}
-    - target: {fileID: 8809556487767258932, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
-      propertyPath: m_SuspensionSpring.spring
-      value: 41446.53
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4762,6 +4720,7 @@ GameObject:
   - component: {fileID: 1692105400}
   - component: {fileID: 1692105399}
   - component: {fileID: 1692105398}
+  - component: {fileID: 1692105402}
   m_Layer: 0
   m_Name: TestPanel
   m_TagString: Untagged
@@ -4855,6 +4814,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1692105402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692105397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 457057a06121d604fa116c9cae738c63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 1975179179}
+  _carCamera: {fileID: 2124203998}
+  _easySuspension: {fileID: 1254215090}
+  _rearWheelDrive: {fileID: 1254215089}
 --- !u!850595691 &1890498392
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -5288,6 +5263,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1656090931}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1975179179 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 940551328778933574, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
+  m_PrefabInstance: {fileID: 715429520}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1981159805
 Mesh:
   m_ObjectHideFlags: 0
@@ -5971,6 +5951,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &2124203998 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7139703553679927328, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
+  m_PrefabInstance: {fileID: 1578892119}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

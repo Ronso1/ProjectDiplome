@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class PickupGun : MonoBehaviour
+public class InteractiveCommands : MonoBehaviour
 {
     [SerializeField] private GameObject _gun;
     [SerializeField] private Camera _playerCamera;
     [Space]
     [SerializeField] private float _distanceToInteract = 2f;
 
-    public void TakeGun()
+    public void InteractiveAction()
     {
         Ray ray = _playerCamera.ScreenPointToRay(Input.mousePosition);
 
@@ -17,6 +17,11 @@ public class PickupGun : MonoBehaviour
             {
                 hitInfo.transform.gameObject.SetActive(false);
                 _gun.gameObject.SetActive(true);
+            }
+
+            if (hitInfo.transform.GetComponent<ChangePlayerToCar>())
+            {
+                hitInfo.transform.GetComponent<ChangePlayerToCar>().SetCarActive();
             }
         }
     }
