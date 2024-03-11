@@ -82201,7 +82201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1963018572}
   m_Layer: 0
-  m_Name: Portable_Lamps
+  m_Name: Portable Lamps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
