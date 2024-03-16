@@ -24,7 +24,7 @@ public class HidePartsOfElevator : MonoBehaviour
     {
         if (_isHide is false && _countHide != 40)
         {
-            _currentPart = _elevatorParts[Random.RandomRange(0, _elevatorParts.Count)];
+            _currentPart = _elevatorParts[Random.Range(0, _elevatorParts.Count)];
 
             if (_currentPart.activeSelf is false)
             {
