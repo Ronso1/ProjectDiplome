@@ -66,4 +66,12 @@ public class HidePartsOfElevator : MonoBehaviour
         _currentPart.SetActive(false);
         _isHide = false;
     }
+
+    private void ResetParts()
+    {
+        foreach (var part in _elevatorParts)
+        {
+            part.SetActive(true);
+        }
+    }
 }
