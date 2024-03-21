@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class TriggerLamp : MonoBehaviour
 {
+    [SerializeField] private PartLevelOpen _partOpenLogic;
     [SerializeField] private Light _lamp;
     [SerializeField] private GameObject _gate;
 
@@ -10,6 +11,7 @@ public class TriggerLamp : MonoBehaviour
     {
         if (other.GetComponent<SphereCollider>())
         {
+            _partOpenLogic.Count++;
             SetActivatedColor();
             StartCoroutine(GateActions());
         }
