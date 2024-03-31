@@ -38,7 +38,7 @@ public class DialogueLogic : MonoBehaviour
                 return;
             }
 
-            _messages[_indexOfList - 1].SetActive(false);
+            if (_indexOfList != 0) _messages[_indexOfList - 1].SetActive(false);
             _messages[_indexOfList].SetActive(true);
             _indexOfList++;
         }
