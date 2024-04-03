@@ -21563,6 +21563,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5924102924114966491, guid: 8f11158263f95f142b82f25f040fd83f, type: 3}
   m_PrefabInstance: {fileID: 431258098}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &435544904 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2239893469420484121, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
+  m_PrefabInstance: {fileID: 354666906}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &435544905 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 71302136280389570, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
+  m_PrefabInstance: {fileID: 354666906}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435544904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de95efc558de74d4da9b19e579e28307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &437505820
 GameObject:
   m_ObjectHideFlags: 0
@@ -92906,9 +92922,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2239779705695562355, guid: 7105b68d70bc92946bb086f82ab70a75, type: 3}
+      propertyPath: _playerGun
+      value: 
+      objectReference: {fileID: 435544904}
+    - target: {fileID: 2239779705695562355, guid: 7105b68d70bc92946bb086f82ab70a75, type: 3}
       propertyPath: _playerMove
       value: 
       objectReference: {fileID: 2065052372}
+    - target: {fileID: 2239779705695562355, guid: 7105b68d70bc92946bb086f82ab70a75, type: 3}
+      propertyPath: _gunAnimations
+      value: 
+      objectReference: {fileID: 435544905}
     - target: {fileID: 2239779705695562355, guid: 7105b68d70bc92946bb086f82ab70a75, type: 3}
       propertyPath: _messages.Array.size
       value: 4

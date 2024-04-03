@@ -4,6 +4,8 @@ using UnityEngine;
 public class DialogueLogic : MonoBehaviour
 {
     [SerializeField] private PlayerMove _playerMove;
+    [SerializeField] private GameObject _playerGun;
+    [SerializeField] private GunAnimations _gunAnimations;
     [SerializeField] private List<GameObject> _messages;
 
     private int _indexOfList = 0;
@@ -12,6 +14,7 @@ public class DialogueLogic : MonoBehaviour
     {
         if (other.GetComponent<PlayerMove>())
         {
+            if (_playerGun.activeSelf) _gunAnimations.StopWalkingAnimation();
             _playerMove.enabled = false;
             _messages[_indexOfList].SetActive(true);
             _indexOfList++;
