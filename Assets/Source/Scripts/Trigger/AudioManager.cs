@@ -7,8 +7,7 @@ public class AudioManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<PlayerMove>()
-            || other.GetComponent<RearWheelDrive>())
+        if (other.CompareTag("Player"))
         {
             _playerAudioSource.Stop();
             _playerAudioSource.clip = _newAudioClip;
