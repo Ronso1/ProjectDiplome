@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private AudioSource _playerAudioSource;
+    [SerializeField] private AudioClip _newAudioClip;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.GetComponent<PlayerMove>()
+            || other.GetComponent<RearWheelDrive>())
+        {
+            _playerAudioSource.Stop();
+            _playerAudioSource.clip = _newAudioClip;
+            _playerAudioSource.Play();
+        }
     }
 }
