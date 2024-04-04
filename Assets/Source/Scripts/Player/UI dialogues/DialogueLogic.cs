@@ -6,6 +6,7 @@ public class DialogueLogic : MonoBehaviour
     [SerializeField] private PlayerMove _playerMove;
     [SerializeField] private GameObject _playerGun;
     [SerializeField] private GunAnimations _gunAnimations;
+    [SerializeField] private GunShoot _gunShoot;
     [SerializeField] private List<GameObject> _messages;
 
     private int _indexOfList = 0;
@@ -14,7 +15,12 @@ public class DialogueLogic : MonoBehaviour
     {
         if (other.GetComponent<PlayerMove>())
         {
-            if (_playerGun.activeSelf) _gunAnimations.StopWalkingAnimation();
+            if (_playerGun.activeSelf)
+            {
+                _gunAnimations.StopWalkingAnimation();
+                _gunShoot.enabled = false;
+            }
+
             _playerMove.enabled = false;
             _messages[_indexOfList].SetActive(true);
             _indexOfList++;
@@ -38,6 +44,7 @@ public class DialogueLogic : MonoBehaviour
                 _messages[_indexOfList - 1].SetActive(false);
                 gameObject.SetActive(false);
                 _playerMove.enabled = true;
+                _gunShoot.enabled = true;
                 return;
             }
 
