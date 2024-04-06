@@ -75311,6 +75311,10 @@ PrefabInstance:
       value: 2.508585
       objectReference: {fileID: 0}
     - target: {fileID: 2239779705695562355, guid: 7105b68d70bc92946bb086f82ab70a75, type: 3}
+      propertyPath: _gunShoot
+      value: 
+      objectReference: {fileID: 1364675279}
+    - target: {fileID: 2239779705695562355, guid: 7105b68d70bc92946bb086f82ab70a75, type: 3}
       propertyPath: _playerGun
       value: 
       objectReference: {fileID: 1364675278}
@@ -76750,6 +76754,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2239893469420484121, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
   m_PrefabInstance: {fileID: 1364675276}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1364675279 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5701569585261293625, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
+  m_PrefabInstance: {fileID: 1364675276}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364675278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d44e666fbfe6f743ba171d6ada03d54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1366577695
 GameObject:
   m_ObjectHideFlags: 0
@@ -91871,6 +91886,10 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 2.508585
       objectReference: {fileID: 0}
+    - target: {fileID: 2239779705695562355, guid: 7105b68d70bc92946bb086f82ab70a75, type: 3}
+      propertyPath: _gunShoot
+      value: 
+      objectReference: {fileID: 1364675279}
     - target: {fileID: 2239779705695562355, guid: 7105b68d70bc92946bb086f82ab70a75, type: 3}
       propertyPath: _playerGun
       value: 
