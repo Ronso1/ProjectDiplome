@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
             _playerAudioSource.Stop();
             _playerAudioSource.clip = _newAudioClip;
             _playerAudioSource.Play();
+            transform.GetComponent<BoxCollider>().enabled = false;
         }
     }
 }
