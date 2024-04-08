@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Source/Scenes/MainLevels/Hub.unity
+    guid: 3c35244a5ae8cf14b939ce340db32647
+  - enabled: 1
+    path: Assets/Source/Scenes/MainLevels/Maze.unity
+    guid: a940c9178996209419be7440a6a9a61b
+  - enabled: 1
+    path: Assets/Source/Scenes/MainLevels/Platform.unity
+    guid: 96e5db1ec3089f34bad76234ec840fc7
+  - enabled: 1
+    path: Assets/Source/Scenes/MainLevels/ShootObstacles.unity
+    guid: 90dfc49c16ffa0447956ded985accfc5
+  - enabled: 1
+    path: Assets/Source/Scenes/MainLevels/CarLevel.unity
+    guid: 89317039e966fa94a96aac445a356c31
   m_configObjects: {}
