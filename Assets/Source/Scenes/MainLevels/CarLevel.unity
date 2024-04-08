@@ -77671,7 +77671,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457057a06121d604fa116c9cae738c63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1975179179}
+  _playerCamera: {fileID: 0}
+  _player: {fileID: 0}
   _carCamera: {fileID: 2124203998}
   _easySuspension: {fileID: 1254215090}
   _rearWheelDrive: {fileID: 1254215089}
@@ -85042,6 +85043,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1483249609}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1485491891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7487855466230978553, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
+  m_PrefabInstance: {fileID: 715429520}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1487618378
 Mesh:
   m_ObjectHideFlags: 0
@@ -89075,7 +89081,15 @@ PrefabInstance:
     - target: {fileID: 6991870592013254188, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
       propertyPath: _player
       value: 
-      objectReference: {fileID: 1975179179}
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991870592013254188, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
+      propertyPath: _playerCamera
+      value: 
+      objectReference: {fileID: 1485491891}
+    - target: {fileID: 7139703553679927328, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
+      propertyPath: m_TagString
+      value: CarCamera
+      objectReference: {fileID: 0}
     - target: {fileID: 8435718695167019811, guid: 8bb956cb08edc594aa2007d71bd51f69, type: 3}
       propertyPath: m_Name
       value: Toy Car Controller
@@ -95380,7 +95394,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457057a06121d604fa116c9cae738c63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 1975179179}
+  _playerCamera: {fileID: 1485491891}
+  _player: {fileID: 1975179181}
   _carCamera: {fileID: 2124203998}
   _easySuspension: {fileID: 1254215090}
   _rearWheelDrive: {fileID: 1254215089}
@@ -110083,11 +110098,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1975179179 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 940551328778933574, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
+--- !u!114 &1975179181 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1031064708549507420, guid: 5084efd519745584d8f1d0f921d11677, type: 3}
   m_PrefabInstance: {fileID: 715429520}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a4eb0a0591aae49ada562f0c302ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1980675871
 Mesh:
   m_ObjectHideFlags: 0
