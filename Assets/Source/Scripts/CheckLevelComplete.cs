@@ -4,6 +4,7 @@ using UnityEngine;
 public class CheckLevelComplete : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _lockers;
+    [SerializeField] private List<GameObject> _lvls;
     [SerializeField] private LevelCompleteLogic _levelCompleteLogic;
     [SerializeField] private GameObject _triggerForGate;
     [SerializeField] private GameObject _startMessage;
@@ -16,6 +17,7 @@ public class CheckLevelComplete : MonoBehaviour
             for (int i = 0; i < _levelCompleteLogic.LevelCompleted; i++)
             {
                 _lockers[i].SetActive(false);
+                _lvls[i].SetActive(false);
             }      
         }
 
