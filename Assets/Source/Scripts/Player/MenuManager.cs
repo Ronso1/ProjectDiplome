@@ -5,8 +5,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private CameraMove _playerCamera;
     [SerializeField] private GameObject _menu;
     [SerializeField] private GameObject _messageParent;
-    [Space]
-    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private GameObject _crosshair;
 
     private bool _menuActive;
 
@@ -15,6 +14,7 @@ public class MenuManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && _menuActive == false)
         {
             Time.timeScale = 0f;
+            _crosshair.SetActive(false);
             _messageParent.SetActive(false);
             _menu.SetActive(true);
             _menuActive = true;
@@ -25,6 +25,7 @@ public class MenuManager : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Escape) && _menuActive)
         {
             Time.timeScale = 1f;
+            _crosshair.SetActive(true);
             _messageParent.SetActive(true);
             _menu.SetActive(false);
             _menuActive = false;
