@@ -39,8 +39,11 @@ public class ObstacleLogic : MonoBehaviour
         if (collision.transform.tag == "Player")
         {
             var playerRespawn = collision.gameObject.GetComponent<PlayerCurrentRespawnPoint>();
+            var playerController = collision.gameObject.GetComponent<CharacterController>();
 
+            playerController.enabled = false;
             playerRespawn.RespawnPlayer();
+            playerController.enabled = true;
         }
     }
 

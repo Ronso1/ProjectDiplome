@@ -11,7 +11,7 @@ public class TriggerSecondPart : MonoBehaviour
             Destroy(other.gameObject);
         }
 
-        if (other.gameObject.GetComponent<PlayerMove>())
+        if (other.gameObject.GetComponent<CharacterController>())
         {
             _spawner.SetActive(true);
         }
