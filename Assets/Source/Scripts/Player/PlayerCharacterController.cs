@@ -65,11 +65,4 @@ public class PlayerCharacterController : MonoBehaviour
             _pickupGun.InteractiveAction();
         }
     }
-
-#if UNITY_EDITOR
-    private void OnDrawGizmos()
-    {
-        Debug.DrawRay(transform.position, new Vector3(0f, -_playerHeight, 0f), Color.blue);
-    }
-#endif
 }
