@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class ChangePlayerToCar : MonoBehaviour
 {
-    [SerializeField] private GameObject _player;
+    [SerializeField] private GameObject _playerCamera;
+    [SerializeField] private PlayerMove _player;
     [SerializeField] private GameObject _carCamera;
     [SerializeField] private EasySuspension _easySuspension;
     [SerializeField] private RearWheelDrive _rearWheelDrive;
@@ -11,7 +12,8 @@ public class ChangePlayerToCar : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            _player.SetActive(false);
+            _playerCamera.SetActive(false);
+            _player.enabled = false;
             _carCamera.SetActive(true);
             _easySuspension.enabled = true;
             _rearWheelDrive.enabled = true;

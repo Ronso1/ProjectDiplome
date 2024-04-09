@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Gun
   - Obstacle
+  - CarCamera
   layers:
   - Default
   - TransparentFX
