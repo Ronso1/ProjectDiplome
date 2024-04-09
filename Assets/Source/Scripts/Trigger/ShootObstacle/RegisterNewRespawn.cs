@@ -6,7 +6,7 @@ public class RegisterNewRespawn : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<PlayerMove>())
+        if (other.GetComponent<CharacterController>())
         {
             _playerRespawnPoint.SetRespawnPoint(transform);
         }
