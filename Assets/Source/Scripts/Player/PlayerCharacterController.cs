@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerCharacterController : MonoBehaviour
 {
+    [SerializeField] private InteractiveCommands _pickupGun;
+
     [Header("Player movement")]
     [SerializeField] private float _playerHeight;
     public float _speed;
@@ -24,6 +26,8 @@ public class PlayerCharacterController : MonoBehaviour
 
     private void Update()
     {
+        PlayerInteractiveAction();
+
         _isGrounded = Physics.Raycast(transform.position, Vector3.down, _playerHeight);
 
         if (_isGrounded)
@@ -53,6 +57,13 @@ public class PlayerCharacterController : MonoBehaviour
 
         _velocity.y += Physics.gravity.y * Time.deltaTime;
         _characterController.Move(_velocity * Time.deltaTime);
+    }
+    private void PlayerInteractiveAction()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            _pickupGun.InteractiveAction();
+        }
     }
 
 #if UNITY_EDITOR

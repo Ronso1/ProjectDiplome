@@ -34,10 +34,10 @@ public class GunShoot : MonoBehaviour
             return;
         }
 
-        if (_player.IsGrounded() == false)
+       /* if (_player.IsGrounded() == false)
         {
             _gunAnimations.StopWalkingAnimation();
-        }
+        }*/
 
         Ray ray = _playerCamera.ScreenPointToRay(Input.mousePosition);
 
