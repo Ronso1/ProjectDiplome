@@ -48,7 +48,11 @@ public class PlayerCharacterController : MonoBehaviour
             _velocity.y = _jumpForce;
         }
 
-        _velocity.y += Physics.gravity.y * Time.deltaTime;
+        if (_isGrounded is false)
+        {
+            _velocity.y += Physics.gravity.y * Time.deltaTime;
+        }
+
         _characterController.Move(_velocity * Time.deltaTime);
 
     }
