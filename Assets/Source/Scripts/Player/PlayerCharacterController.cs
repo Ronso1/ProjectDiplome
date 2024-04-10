@@ -6,19 +6,18 @@ public class PlayerCharacterController : MonoBehaviour
 
     [Header("Player movement")]
     [SerializeField] private float _playerHeight;
-    public float _speed;
-    public float _jumpForce;
+    [SerializeField] private float _speed;
+    [SerializeField] private float _sprintSpeed;
+    [SerializeField] private float _jumpForce;
     private CharacterController _characterController;
     private Vector3 _velocity;
 
-    [Header("Camera")]
-    public float _sensitivity;
-    public GameObject _playerCamera;
-
     private bool _isGrounded;
+    private float _defaultSpeed;
 
     private void Start()
     {
+        _defaultSpeed = _speed;
         _characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -29,23 +28,18 @@ public class PlayerCharacterController : MonoBehaviour
 
         _isGrounded = Physics.Raycast(transform.position, Vector3.down, _playerHeight);
 
-        /*if (_isGrounded)
-        {
-            _velocity.y = 0f;
-        }*/
-
-        /* float mouseX = Input.GetAxis("Mouse X") * _sensitivity * Time.deltaTime;
-         float mouseY = Input.GetAxis("Mouse Y") * _sensitivity * Time.deltaTime;
-
-         _rotationX -= mouseY;
-         _rotationX = Mathf.Clamp(_rotationX, -90f, 90f);
-
-         _playerCamera.transform.localRotation = Quaternion.Euler(_rotationX, 0f, 0f);
-         transform.Rotate(Vector3.up * mouseX);*/
-
         float xMove = Input.GetAxis("Horizontal");
         float zMove = Input.GetAxis("Vertical");
         Vector3 move = transform.right * xMove + transform.forward * zMove;
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            _speed = _sprintSpeed;
+        }
+        else
+        {
+            _speed = _defaultSpeed;  
+        }
 
         _characterController.Move(move * _speed * Time.deltaTime);
 
