@@ -14,7 +14,6 @@ public class PlayerCharacterController : MonoBehaviour
     [Header("Camera")]
     public float _sensitivity;
     public GameObject _playerCamera;
-    private float _rotationX = 0f;
 
     private bool _isGrounded;
 
@@ -30,19 +29,19 @@ public class PlayerCharacterController : MonoBehaviour
 
         _isGrounded = Physics.Raycast(transform.position, Vector3.down, _playerHeight);
 
-        if (_isGrounded)
-        {           
+        /*if (_isGrounded)
+        {
             _velocity.y = 0f;
-        }
+        }*/
 
-        float mouseX = Input.GetAxis("Mouse X") * _sensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * _sensitivity * Time.deltaTime;
+        /* float mouseX = Input.GetAxis("Mouse X") * _sensitivity * Time.deltaTime;
+         float mouseY = Input.GetAxis("Mouse Y") * _sensitivity * Time.deltaTime;
 
-        _rotationX -= mouseY;
-        _rotationX = Mathf.Clamp(_rotationX, -90f, 90f);
+         _rotationX -= mouseY;
+         _rotationX = Mathf.Clamp(_rotationX, -90f, 90f);
 
-        _playerCamera.transform.localRotation = Quaternion.Euler(_rotationX, 0f, 0f);
-        transform.Rotate(Vector3.up * mouseX);
+         _playerCamera.transform.localRotation = Quaternion.Euler(_rotationX, 0f, 0f);
+         transform.Rotate(Vector3.up * mouseX);*/
 
         float xMove = Input.GetAxis("Horizontal");
         float zMove = Input.GetAxis("Vertical");
@@ -57,6 +56,7 @@ public class PlayerCharacterController : MonoBehaviour
 
         _velocity.y += Physics.gravity.y * Time.deltaTime;
         _characterController.Move(_velocity * Time.deltaTime);
+
     }
     private void PlayerInteractiveAction()
     {
