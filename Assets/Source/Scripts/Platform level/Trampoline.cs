@@ -6,12 +6,11 @@ public class Trampoline : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Rigidbody rb = other.GetComponent<Rigidbody>();
-
-        if (rb != null)
+        if (other.GetComponent<CharacterController>())
         {
-            Vector3 jumpVector = Vector3.up * Mathf.Sqrt(2 * _jumpHeight * Mathf.Abs(Physics.gravity.y));
-            rb.velocity = jumpVector;
+            var player = other.GetComponent<PlayerCharacterController>();
+
+            player.SetTrampolineJump(_jumpHeight);
         }
     }
 }

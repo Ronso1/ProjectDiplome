@@ -56,11 +56,17 @@ public class PlayerCharacterController : MonoBehaviour
         _characterController.Move(_velocity * Time.deltaTime);
 
     }
+
     private void PlayerInteractiveAction()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
             _pickupGun.InteractiveAction();
         }
+    }
+
+    public void SetTrampolineJump(float jumpHeight)
+    {
+        _velocity.y = jumpHeight;
     }
 }
