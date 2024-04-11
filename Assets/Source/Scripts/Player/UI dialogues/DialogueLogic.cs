@@ -3,17 +3,28 @@ using UnityEngine;
 
 public class DialogueLogic : MonoBehaviour
 {
-    [SerializeField] private PlayerMove _playerMove;
+    [SerializeField] private PlayerCharacterController _playerMove;
     [SerializeField] private GameObject _playerGun;
     [SerializeField] private GunAnimations _gunAnimations;
     [SerializeField] private GunShoot _gunShoot;
     [SerializeField] private List<GameObject> _messages;
 
     private int _indexOfList = 0;
+    private bool _onTrigger;
+
+    private void Update()
+    {
+        if (_onTrigger)
+        {
+            ShowMessageForPlayer();
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<PlayerMove>())
+        _onTrigger = true;
+
+        if (other.GetComponent<PlayerCharacterController>())
         {
             if (_playerGun.activeSelf)
             {
@@ -26,15 +37,7 @@ public class DialogueLogic : MonoBehaviour
             _indexOfList++;
         }
     }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.GetComponent<PlayerMove>())
-        {
-            ShowMessageForPlayer();
-        }
-    }
-
+   
     private void ShowMessageForPlayer()
     {
         if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Return))
@@ -45,6 +48,7 @@ public class DialogueLogic : MonoBehaviour
                 gameObject.SetActive(false);
                 _playerMove.enabled = true;
                 _gunShoot.enabled = true;
+                _onTrigger = false;
                 return;
             }
 
