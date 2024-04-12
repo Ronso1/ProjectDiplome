@@ -7,7 +7,7 @@ public class LoadLevel : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<PlayerMove>())
+        if (other.GetComponent<PlayerCharacterController>())
         {
             SceneManager.LoadScene(_levelID);
         }

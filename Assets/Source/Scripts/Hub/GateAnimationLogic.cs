@@ -6,7 +6,7 @@ public class GateAnimationLogic : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<PlayerMove>())
+        if (other.GetComponent<PlayerCharacterController>())
         {
             _gateAnimator.SetTrigger("Open");
         }

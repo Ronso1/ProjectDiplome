@@ -1311,11 +1311,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pickupGun: {fileID: 1214547001854367389}
-  _playerHeight: 1.01
-  _speed: 8
+  _headBobEffect: {fileID: 1442815681962062121}
+  _gunAnimations: {fileID: 4016193359962217379}
+  _playerHeight: 1.03
+  _speed: 5
+  _sprintSpeed: 8
   _jumpForce: 6
-  _sensitivity: 10
-  _playerCamera: {fileID: 1562521503299068797}
 --- !u!114 &1214547001854367389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1473,3 +1474,14 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3421170648073366887, guid: c12a6f26d20232047805688b7c0d6a72, type: 3}
   m_PrefabInstance: {fileID: 517616906347026207}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4016193359962217379 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3500021765409180860, guid: c12a6f26d20232047805688b7c0d6a72, type: 3}
+  m_PrefabInstance: {fileID: 517616906347026207}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2906089777661672056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de95efc558de74d4da9b19e579e28307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

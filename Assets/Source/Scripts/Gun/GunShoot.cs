@@ -10,7 +10,6 @@ public class GunShoot : MonoBehaviour
     [SerializeField] private GameObject _gunMuzzle;
     [SerializeField] private GameObject _bullet;
     [Space]
-    [SerializeField] private PlayerMove _player;
     [SerializeField] private TrainObstacle _obstacleHandler;
     [SerializeField] private GunAnimations _gunAnimations;
     [Space]
@@ -33,11 +32,6 @@ public class GunShoot : MonoBehaviour
         {
             return;
         }
-
-       /* if (_player.IsGrounded() == false)
-        {
-            _gunAnimations.StopWalkingAnimation();
-        }*/
 
         Ray ray = _playerCamera.ScreenPointToRay(Input.mousePosition);
 
