@@ -5,6 +5,7 @@ public class PlayerCharacterController : MonoBehaviour
     [SerializeField] private InteractiveCommands _pickupGun;
     [SerializeField] private HeadBobEffect _headBobEffect;
     [SerializeField] private GunAnimations _gunAnimations;
+    [SerializeField] private ChangeVolume _changeVolume;
 
     [Header("Player movement")]
     [SerializeField] private float _playerHeight;
@@ -21,6 +22,7 @@ public class PlayerCharacterController : MonoBehaviour
 
     private void Start()
     {
+        _changeVolume.TransferVolumeValue();
         _defaultSpeed = _speed;
         _characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
