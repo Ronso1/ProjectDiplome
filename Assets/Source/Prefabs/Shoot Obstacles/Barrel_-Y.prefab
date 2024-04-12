@@ -122,8 +122,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 100
   _lifeTime: 10
-  _minSpeedRange: 8
-  _maxSpeedRange: 15
+  _minSpeedRange: 4
+  _maxSpeedRange: 6
   _direction: {x: 0, y: -1, z: 0}
 --- !u!54 &563088632366755593
 Rigidbody:
