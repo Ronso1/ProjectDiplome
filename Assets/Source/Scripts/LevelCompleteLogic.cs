@@ -14,7 +14,7 @@ public class LevelCompleteLogic : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         _levelCompleted++;
-        _levelID = SceneManager.sceneCount;
+        _levelID = SceneManager.GetActiveScene().buildIndex;
         transform.GetComponent<MeshRenderer>().enabled = false;
         SceneManager.LoadScene(_hubID);
     }

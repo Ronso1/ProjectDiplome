@@ -6,9 +6,11 @@ public class TeleportPlayerToFinalRoom : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent<PlayerMove>())
+        if (other.GetComponent<PlayerCharacterController>())
         {
+            other.GetComponent<CharacterController>().enabled = false;
             other.transform.position = _endPointPosition.position;
+            other.GetComponent<CharacterController>().enabled = true;
         }
     }
 }
