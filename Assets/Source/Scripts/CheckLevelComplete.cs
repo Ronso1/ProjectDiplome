@@ -5,6 +5,7 @@ public class CheckLevelComplete : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _lockers;
     [SerializeField] private List<GameObject> _lvls;
+    [SerializeField] private static List<int> _levelsCompleted;
     [SerializeField] private LevelCompleteLogic _levelCompleteLogic;
     [SerializeField] private GameObject _triggerForGate;
     [SerializeField] private GameObject _startMessage;
@@ -14,11 +15,16 @@ public class CheckLevelComplete : MonoBehaviour
         if (_levelCompleteLogic.LevelCompleted != 0)
         {
             _startMessage.SetActive(false);
-            for (int i = 0; i < _levelCompleteLogic.LevelCompleted; i++)
+            _levelsCompleted[_levelCompleteLogic.LevelID] = 1;
+
+            for (int i = 0; i < _lvls.Count; i++)
             {
-                _lockers[i].SetActive(false);
-                _lvls[i].SetActive(false);
-            }      
+                if (_levelsCompleted[i] == 1)
+                {
+                    _lockers[i].SetActive(false);
+                    _lvls[i].SetActive(false);
+                }
+            }
         }
 
         if (_levelCompleteLogic.LevelCompleted == 4)
