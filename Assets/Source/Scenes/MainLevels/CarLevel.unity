@@ -117477,7 +117477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b61eb72a2e5c94390e01a919a94283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerAudioSource: {fileID: 0}
+  _playerAudioSource: {fileID: 8828189422614049924}
   _newAudioClip: {fileID: 8300000, guid: d18dca752ee04d04599fe4fb5ac4104b, type: 3}
 --- !u!33 &4886421287690787651
 MeshFilter:
